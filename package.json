@@ -1,0 +1,31 @@
+{
+  "name": "task-scheduler",
+  "version": "1.0.0",
+  "description": "Optimized Task Scheduling System to maximise task completion in a limited time",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "task-scheduler"
+  },
+  "keywords": [
+    "dsa"
+  ],
+  "author": "Virat Tripathi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
