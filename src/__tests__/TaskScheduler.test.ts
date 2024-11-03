@@ -9,8 +9,8 @@ describe('Task Scheduler', () => {
             { id: 3, duration: 3, deadline: "2024-11-01T14:00:00Z" },
             { id: 4, duration: 2, deadline: "2024-11-01T15:00:00Z" }
         ];        
-
-        const result: ScheduleResult = scheduleTasks(tasks);
+        const startTime = "2024-10-31T00:00:00";
+        const result: ScheduleResult = scheduleTasks(tasks,startTime);
         expect(result.scheduledTasks.length).toBe(1);
         expect(result.scheduledTasks).toEqual(expect.arrayContaining([
             expect.objectContaining({"deadline": "2024-11-01T11:00:00Z", "deadlineDays": 1, "duration": 1, "id": 2}),
@@ -27,7 +27,8 @@ describe('Task Scheduler', () => {
             { id: 4, duration: 2, deadline: "2024-11-10T15:00:00Z" }
         ];
 
-        const result: ScheduleResult = scheduleTasks(tasks);
+        const startTime = "2024-10-31T00:00:00";
+        const result: ScheduleResult = scheduleTasks(tasks,startTime);
 
         expect(result.scheduledTasks.length).toBe(3);
         expect(result.scheduledTasks).toEqual(expect.arrayContaining([

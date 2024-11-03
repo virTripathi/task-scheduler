@@ -6,8 +6,7 @@ function convertDeadlineToDays(task: Task, startTime: string): number {
     return daysDifference;
 }
 
-export function scheduleTasks(tasks: Task[]): ScheduleResult {
-    const startTime = new Date().toISOString();
+export function scheduleTasks(tasks: Task[], startTime=new Date().toISOString()): ScheduleResult {
     const tasksWithDeadlineDays: ScheduledTask[] = tasks.map(task => ({
         ...task,
         deadlineDays: convertDeadlineToDays(task, startTime)
